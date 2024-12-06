@@ -1,0 +1,136 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: black; 
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container {
+    text-align: center;
+    margin-top: 20px;
+}
+.magic-ball {
+    width: 300px;
+    height: 300px;
+    background-image: url('фон.jpg'); 
+    background-size: cover;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 100px rgba(255, 0, 191, 0.6);
+    margin-top: 200px;
+    position: relative;
+    transition: box-shadow 0.3s ease;
+}
+.answer-container {
+    background: rgba(0, 0, 0);
+    border-radius: 50%;
+    width: 130px;
+    height: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+.answer {
+    color: rgb(255, 255, 255);
+    font-size: 27px;
+    text-align: center;
+}
+input {
+    width: 300px;
+    padding: 12px;
+    margin: 20px 0;
+    border: none;
+    border-radius: 25px;
+    background-color: #f0f0f0;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 1.1em;
+    outline: none;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+button {
+    padding: 12px 30px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 25px;
+    background: linear-gradient(45deg, #2f00ff, #739de6); 
+    color: white;
+    font-size: 1.2em;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: linear-gradient(45deg, #f500c0, #0011fc); 
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+}
+button:active {
+    transform: scale(0.50); 
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+}
+@keyframes shake {
+    0%, 100% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(-7px, 7px);
+    }
+    50% {
+        transform: translate(7px, -7px);
+    }
+    75% {
+        transform: translate(-7px, -7px);
+    }
+}
+
+@keyframes shake-light {
+    0%, 100% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(-5px, 5px);
+    }
+    50% {
+        transform: translate(5px, -5px);
+    }
+    75% {
+        transform: translate(-5px, -5px);
+    }
+}
+.magic-ball.shake {
+    animation: shake-light 0.5s;
+}
+.answer-container.shake {
+    animation: shake 0.5s;
+}
+.magic-ball.glow {
+    box-shadow: 0 0 50px rgb(0, 17, 255), 0 0 100px rgba(19, 43, 255, 0.6);
+}
+.btn-back {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 10px 15px;
+    font-size: 20px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 20%;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.btn-back:hover {
+    background-color: #45a049;
+    transform: scale(1.1);
+}
